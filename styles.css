@@ -1,0 +1,161 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: top;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: white;/*adding colour to my background, although i need to check if it the section i want it to be*/
+    color: black;/*the colour of the writing*/
+    height: 100vh;
+
+
+}
+
+.outer-container{
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    box-sizing: border-box;
+    width: 200px;
+    height: 1000px;
+    text-align: left;
+}
+
+.top-container{
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 2000px;
+    padding: 10px;
+    height: 180px;
+    align-items: top; 
+    text-align: left;
+    
+}
+
+.top-container h1{
+    margin: 10px;
+    font-size: 20px;
+    color: blanchedalmond;
+   
+}
+
+.profile-pic{
+    margin: 0;
+    max-width: 90%;
+    margin-bottom: 100px;
+    padding: 20px;
+    
+}
+
+.text-below-pic{
+    width: 70%;
+    color: blanchedalmond;
+    align-items: center;
+    
+
+}
+
+.outer-container h2{
+    font-size: 20px;
+    color: blanchedalmond;
+    text-align: left;
+    margin-left: 10px;
+    
+}
+
+
+.outer-container h3{
+    font-size: 20px;
+    color: blanchedalmond;
+    text-align: left;
+    margin-bottom: 0px;
+    
+}
+
+.outer-container h4{
+    font-size: 20px;
+    color: blanchedalmond;
+}
+
+.text-below-pic v{
+    margin-bottom: 0;
+}
+
+/*This part is for the middle of my page, mainly the bubble structure, if they work*/
+.middle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;/*all bubbles must have the same space*/
+    flex-wrap: wrap;/*must wrap into next line, though i doubt i need that*/
+    width: 200%;
+    margin-top: 200px;
+}
+
+.bubble{
+    background-color: blanchedalmond;
+    border-radius: 1%;
+    width: 1000px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 8px;
+}
+
+.bubble h3{
+    margin: 0 0 10px 0;/*space below the heading*/
+    font-size: 17px;
+}
+
+.bubble ul{
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+    text-align: left;
+}
+
+.bubble ul li{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/*Linkedin icon*/
+.linkedin-icon{
+    color: blanchedalmond;
+    font-size: 2em;
+    text-decoration: none;
+    align-items: left;
+    margin: 10px;
+    transition: transform 0.2s;
+
+}
+
+.linkedin-icon:hover{
+    transform: scale(1.1);
+}
+
+.github-icon{
+    color: blanchedalmond;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 0px;
+    align-items: left;
+    transition: transform 0.2s;
+}
+
+.github-icon:hover{
+    transform: scale(1.1);
+}
+
+.bubble:hover{
+    transform: scale(1.1);
+}
