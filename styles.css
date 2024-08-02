@@ -1,161 +1,183 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: top;
-    align-items: flex-start;
-    height: 100vh;
-    background-color: white;/*adding colour to my background, although i need to check if it the section i want it to be*/
-    color: black;/*the colour of the writing*/
-    height: 100vh;
-
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: top;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: white; /*adding colour to my background, although i need to check if it the section i want it to be*/
+  color: black; /*the colour of the writing*/
+  height: 100vh;
 }
 
-.outer-container{
-    background-color: #444;
-    display: flex;
-    flex-direction: column;
-    align-items: top;
-    box-sizing: border-box;
-    width: 200px;
-    height: 1000px;
-    text-align: left;
+.outer-container {
+  background-color: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  box-sizing: border-box;
+  width: 200px;
+  height: 1000px;
+  text-align: left;
 }
 
-.top-container{
-    background-color: #444;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 2000px;
-    padding: 10px;
-    height: 180px;
-    align-items: top; 
-    text-align: left;
-    
+.top-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #444;
+  padding: 20px 0;
+  position: relative;
 }
 
-.top-container h1{
-    margin: 10px;
-    font-size: 20px;
-    color: blanchedalmond;
-   
+.main-heading {
+  font-size: 24px;
+  color: blanchedalmond;
+  margin: 10px 0;
 }
 
-.profile-pic{
-    margin: 0;
-    max-width: 90%;
-    margin-bottom: 100px;
-    padding: 20px;
-    
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 0%;
+  margin-top: 10px;
 }
 
-.text-below-pic{
-    width: 70%;
-    color: blanchedalmond;
-    align-items: center;
-    
-
+.text-below-pic {
+  width: 70%;
+  color: blanchedalmond;
+  text-align: left;
+  margin: 10px;
+  margin-top: 1px; /* Adjust this value to control the space below the profile picture */
 }
 
-.outer-container h2{
-    font-size: 20px;
-    color: blanchedalmond;
-    text-align: left;
-    margin-left: 10px;
-    
+.outer-container h2 {
+  font-size: 20px;
+  color: blanchedalmond;
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: -5px;
 }
 
-
-.outer-container h3{
-    font-size: 20px;
-    color: blanchedalmond;
-    text-align: left;
-    margin-bottom: 0px;
-    
+.outer-container h3 {
+  font-size: 20px;
+  color: blanchedalmond;
+  text-align: left;
+  margin-bottom: 0px;
+  margin-top: 50px;
 }
 
-.outer-container h4{
-    font-size: 20px;
-    color: blanchedalmond;
-}
-
-.text-below-pic v{
-    margin-bottom: 0;
+.outer-container h4 {
+  font-size: 20px;
+  color: blanchedalmond;
+  margin-bottom: -5px;
+  margin-top: 50px;
 }
 
 /*This part is for the middle of my page, mainly the bubble structure, if they work*/
-.middle-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;/*all bubbles must have the same space*/
-    flex-wrap: wrap;/*must wrap into next line, though i doubt i need that*/
-    width: 200%;
-    margin-top: 200px;
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /*all bubbles must have the same space*/
+  flex-wrap: wrap; /*must wrap into next line, though i doubt i need that*/
+  width: 200%;
+  margin-top: 30px;
 }
 
-.bubble{
-    background-color: blanchedalmond;
-    border-radius: 1%;
-    width: 1000px;
-    height: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: left;
-    margin: 8px;
+.bubble {
+  background-color: blanchedalmond;
+  border-radius: 1%;
+  width: 1000px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 8px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  position: relative;
 }
 
-.bubble h3{
-    margin: 0 0 10px 0;/*space below the heading*/
-    font-size: 17px;
+.image-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: background color for the images */
+  overflow: hidden;
+  text-align: center;
 }
 
-.bubble ul{
-    list-style: disc;
-    padding-left: 20px;
-    margin: 0;
-    text-align: left;
+.bubble:hover .image-container {
+  display: block;
 }
 
-.bubble ul li{
-    margin-bottom: 5px;
-    font-size: 14px;
+.image-container img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.bubble h3 {
+  margin: 0 0 10px 0; /*space below the heading*/
+  font-size: 26px;
+}
+
+.bubble ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+  text-align: left;
+}
+
+.bubble ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 
 /*Linkedin icon*/
-.linkedin-icon{
-    color: blanchedalmond;
-    font-size: 2em;
-    text-decoration: none;
-    align-items: left;
-    margin: 10px;
-    transition: transform 0.2s;
-
+.linkedin-icon {
+  color: blanchedalmond;
+  font-size: 2em;
+  text-decoration: none;
+  align-items: left;
+  margin: 10px;
+  transition: transform 0.2s;
+  margin-bottom: 50px;
 }
 
-.linkedin-icon:hover{
-    transform: scale(1.1);
+.linkedin-icon:hover {
+  transform: scale(1.1);
 }
 
-.github-icon{
-    color: blanchedalmond;
-    font-size: 2em;
-    text-decoration: none;
-    margin: 0px;
-    align-items: left;
-    transition: transform 0.2s;
+.github-icon {
+  color: blanchedalmond;
+  font-size: 2em;
+  text-decoration: none;
+  margin: 0px;
+  align-items: left;
+  transition: transform 0.2s;
+  margin-bottom: 50px;
 }
 
-.github-icon:hover{
-    transform: scale(1.1);
+.github-icon:hover {
+  transform: scale(1.1);
 }
 
-.bubble:hover{
-    transform: scale(1.1);
+.bubble:hover {
+  transform: scale(1.1);
 }
